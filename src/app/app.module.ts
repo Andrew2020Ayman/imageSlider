@@ -9,19 +9,37 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import 'hammerjs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import { SplashComponent } from './splash/splash.component';
+
+import { SliderComponent } from './slider/slider.component';
+
+import { TooltipModule} from 'ngx-bootstrap/tooltip';
+
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { PuzzleComponent } from './puzzle/puzzle.component';
+
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    SplashComponent,
+    SliderComponent,
+    PuzzleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TooltipModule.forRoot(),
+    MdbCheckboxModule,
+    MdbCarouselModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
