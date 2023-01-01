@@ -19,7 +19,13 @@ import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { PuzzleComponent } from './puzzle/puzzle.component';
 
+/* import {DragDropModule} from '@angular/cdk/drag-drop'; */
+import { ReOrderAyatComponent } from './re-order-ayat/re-order-ayat.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+
+import { NgxWheelModule } from 'ngx-wheel';
+import { DataService } from './data.service';
+import { WheelComponent } from './wheel/wheel.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     HeaderComponent,
     SplashComponent,
     SliderComponent,
-    PuzzleComponent
+    PuzzleComponent,
+    ReOrderAyatComponent,
+    WheelComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +47,11 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     TooltipModule.forRoot(),
     MdbCheckboxModule,
     MdbCarouselModule,
-    DragDropModule
+    DragDropModule,
+    NgxWheelModule
+    
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

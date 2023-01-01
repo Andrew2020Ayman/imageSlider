@@ -91,3 +91,35 @@
     border: dotted #ccc 2px;
   }
   
+
+
+  .puzzleCont{
+    position: relative;
+    width: 457px;
+    height: 400px;
+  }
+  ::ng-deep canvas{
+   /*  background-image: url('../../assets/Main_Image.png')!important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; */
+
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  #validated-canvas-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+}
+.active{
+  opacity: 1 !important;
+  z-index: 3;
+}
